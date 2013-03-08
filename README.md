@@ -25,3 +25,4 @@ AFNetworking 1.0 and higher requires either iOS 5.0 and above, or Mac OS 10.7 (6
 
 For compatibility with iOS 4.3, use the latest 0.10.x release.
 
+https://github.com/AFNetworking/AFNetworking/tree/0.10.1
