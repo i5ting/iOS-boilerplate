@@ -153,15 +153,20 @@
     self.webView.scalesPageToFit = YES;
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithCustomView:activityIndicator] autorelease];
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+    NSURL *nurl = [NSURL URLWithString:[NSString stringWithFormat:@"%@", self.url]];
+
+//    [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+    NSURLRequest *re = [NSURLRequest requestWithURL:nurl];
+    
+    [self.webView loadRequest:re];
     [self updateToolbar];
 }
 
-
+//已经被注释掉了
 - (void)viewDidUnload
 {
     [[self navigationItem] setRightBarButtonItem:nil];
-    [super viewDidUnload];
+//    [super viewDidUnload];
 }
 
 

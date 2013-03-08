@@ -33,7 +33,7 @@ NSString * const kbaiduTwitterBaseURLString = @"http://top.baidu.com/news/pagina
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
     
     // Accept HTTP Header; see http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1
-	[self setDefaultHeader:@"Accept" value:@"application/json"];
+	[self setDefaultHeader:@"Accept" value:@"text/html"];
     
 	// X-UDID HTTP Header
 	[self setDefaultHeader:@"X-UDID" value:[[UIDevice currentDevice] uniqueIdentifier]];

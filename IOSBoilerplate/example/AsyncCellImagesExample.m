@@ -31,6 +31,9 @@
 #import "TwitterSearchClient.h"
 #import "AsyncCell.h"
 #import "BaiduTopnewsClient.h"
+#import "BrowserViewController.h"
+
+#import "JSONKit.h"
 
 @implementation AsyncCellImagesExample
 
@@ -80,21 +83,29 @@
     [cell updateCellInfo:obj];
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSDictionary* obj = [results objectAtIndex:indexPath.row];
+    NSString *url = [obj objectForKey:@"link"];
+    BrowserViewController *bvc = [[BrowserViewController alloc] initWithUrls:url];
+    [self.navigationController pushViewController:bvc animated:YES];
+    [bvc release];
+
+}
      
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 58;
 }
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-}
+ 
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Latest twits about #iOS";
+    self.title = @"百度风云实讯";
 }
 
 - (void)viewDidUnload
@@ -126,7 +137,23 @@
     [[BaiduTopnewsClient sharedClient] getPath:@"search" parameters:[NSDictionary dictionaryWithObject:@"2" forKey:@"pageno"] success:^(id object) {
         [SVProgressHUD dismiss];
         
-        self.results = [object valueForKey:@"results"];
+        NSArray *f = [object objectFromJSONData];
+        
+        NSMutableArray *r = [NSMutableArray array];
+
+        for (id i in f) {
+            NSArray *newsArr = [i objectForKey:@"news"];
+            
+            for (NSDictionary *ddd in newsArr) {
+                if ([[ddd objectForKey:@"image"] length]>0) {
+                    [r addObject:ddd];
+                }
+            
+            }
+        }
+        
+        self.results = r;
+        //self.results = [object valueForKey:@"results"];
         [table reloadData];
         
     } failure:^(NSHTTPURLResponse *response, NSError *error) {

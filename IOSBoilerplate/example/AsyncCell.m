@@ -75,8 +75,8 @@ static UIFont* bold14 = nil;
 	[[UIColor whiteColor] set];
 	CGContextFillRect(context, rect);
 	
-	NSString* name = [info stringForKey:@"from_user"];
-	NSString* text = [info stringForKey:@"text"];
+	NSString* name = [info stringForKey:@"source"];
+	NSString* text = [info stringForKey:@"title"];
 	
 	CGFloat widthr = self.frame.size.width - 70;
 	
@@ -93,7 +93,7 @@ static UIFont* bold14 = nil;
 
 - (void) updateCellInfo:(NSDictionary*)_info {
 	self.info = _info;
-    NSString *urlString = [info stringForKey:@"profile_image_url"];
+    NSString *urlString = [info objectForKey:@"image"];
 	if (urlString) {
         AFImageRequestOperation *operation = [AFImageRequestOperation imageRequestOperationWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]] success:^(UIImage *requestedImage) {
             self.image = requestedImage;
