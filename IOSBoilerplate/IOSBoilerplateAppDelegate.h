@@ -28,7 +28,41 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IOSBoilerplateAppDelegate : NSObject <UIApplicationDelegate>
+#import "SinaWeibo.h"
+#import "SNViewController.h"
+
+/**将下面注释取消，并定义自己的app key，app secret以及授权跳转地址uri
+ 此demo即可编译运行**/
+
+#define kAppKey             @"774472872"
+#define kAppSecret          @"f7a16fab166225c072d0a84f6e95bcdb"
+#define kAppRedirectURI     @"http://uhzl006130.chinaw3.com/aa/index.php"
+
+#ifndef kAppKey
+#error
+#endif
+
+#ifndef kAppSecret
+#error
+#endif
+
+#ifndef kAppRedirectURI
+#error
+#endif
+
+@class SinaWeibo;
+@class SNViewController;
+
+
+@interface IOSBoilerplateAppDelegate : NSObject <UIApplicationDelegate>{
+
+    SinaWeibo *sinaweibo;
+}
+
+@property (readonly, nonatomic) SinaWeibo *sinaweibo;
+
+
+@property (retain, nonatomic) SNViewController *viewController;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 

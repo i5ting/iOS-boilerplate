@@ -31,8 +31,10 @@
 #import "BrowserViewController.h"
 
 @implementation IOSBoilerplateAppDelegate
-
+@synthesize sinaweibo;
 @synthesize window = _window;
+@synthesize viewController = _viewController;
+
 @synthesize navigationController = _navigationController;
 
 + (IOSBoilerplateAppDelegate*) sharedAppDelegate {
@@ -60,6 +62,27 @@
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+
+-(void)weibo
+{
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    // Override point for customization after application launch.
+    self.viewController = [[[SNViewController alloc] initWithNibName:nil bundle:nil] autorelease];
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+    
+    
+    sinaweibo = [[SinaWeibo alloc] initWithAppKey:kAppKey appSecret:kAppSecret appRedirectURI:kAppRedirectURI andDelegate:_viewController];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *sinaweiboInfo = [defaults objectForKey:@"SinaWeiboAuthData"];
+    if ([sinaweiboInfo objectForKey:@"AccessTokenKey"] && [sinaweiboInfo objectForKey:@"ExpirationDateKey"] && [sinaweiboInfo objectForKey:@"UserIDKey"])
+    {
+        sinaweibo.accessToken = [sinaweiboInfo objectForKey:@"AccessTokenKey"];
+        sinaweibo.expirationDate = [sinaweiboInfo objectForKey:@"ExpirationDateKey"];
+        sinaweibo.userID = [sinaweiboInfo objectForKey:@"UserIDKey"];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
