@@ -30,6 +30,7 @@
 #import "SVProgressHUD.h"
 #import "TwitterSearchClient.h"
 #import "AsyncCell.h"
+#import "BaiduTopnewsClient.h"
 
 @implementation AsyncCellImagesExample
 
@@ -112,14 +113,27 @@
     
     [SVProgressHUD showInView:self.view];
     
-    [[TwitterSearchClient sharedClient] getPath:@"search" parameters:[NSDictionary dictionaryWithObject:@"iOS" forKey:@"q"] success:^(id object) {
+//    [[TwitterSearchClient sharedClient] getPath:@"search" parameters:[NSDictionary dictionaryWithObject:@"iOS" forKey:@"q"] success:^(id object) {
+//        [SVProgressHUD dismiss];
+//        
+//        self.results = [object valueForKey:@"results"];
+//        [table reloadData];
+//    } failure:^(NSHTTPURLResponse *response, NSError *error) {
+//        [SVProgressHUD dismissWithError:[error localizedDescription]];
+//    }];
+//    
+    
+    [[BaiduTopnewsClient sharedClient] getPath:@"search" parameters:[NSDictionary dictionaryWithObject:@"2" forKey:@"pageno"] success:^(id object) {
         [SVProgressHUD dismiss];
         
         self.results = [object valueForKey:@"results"];
         [table reloadData];
+        
     } failure:^(NSHTTPURLResponse *response, NSError *error) {
         [SVProgressHUD dismissWithError:[error localizedDescription]];
     }];
+    
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
