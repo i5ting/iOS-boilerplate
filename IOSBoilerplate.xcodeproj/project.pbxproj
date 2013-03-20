@@ -11,7 +11,6 @@
 		09270761141E4E2B00E778AE /* StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09270760141E4E2B00E778AE /* StringHelper.m */; };
 		09270764141E4EC900E778AE /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09270763141E4EC900E778AE /* DataHelper.m */; };
 		09270769141E52BB00E778AE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09270768141E52BB00E778AE /* CoreLocation.framework */; };
-		092D3D2C145AE54E002F5F6C /* AFURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 092D3D2B145AE54E002F5F6C /* AFURLCache.m */; };
 		093EC38B145B0DE90010CDBB /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 093EC377145B0DE90010CDBB /* AFHTTPClient.m */; };
 		093EC38C145B0DE90010CDBB /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 093EC379145B0DE90010CDBB /* AFHTTPRequestOperation.m */; };
 		093EC38D145B0DE90010CDBB /* AFImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 093EC37B145B0DE90010CDBB /* AFImageCache.m */; };
@@ -82,6 +81,8 @@
 		5DD841F916E9D4C00090DEE4 /* VariableHeightExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD841E316E9D4C00090DEE4 /* VariableHeightExample.m */; };
 		5DD841FA16E9D4C00090DEE4 /* VariableHeightExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DD841E416E9D4C00090DEE4 /* VariableHeightExample.xib */; };
 		5DD841FE16E9DC140090DEE4 /* BaiduTopnewsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD841FD16E9DC140090DEE4 /* BaiduTopnewsClient.m */; };
+		5DFF824416F9690400C839D6 /* AFURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF824316F9690400C839D6 /* AFURLCache.m */; };
+		5DFF824516F9690400C839D6 /* AFURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF824316F9690400C839D6 /* AFURLCache.m */; };
 		D8EA24C4145BA49100EB08B3 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EA24C0145BA49100EB08B3 /* BrowserViewController.m */; };
 		D8EA24C5145BA49100EB08B3 /* BrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EA24C1145BA49100EB08B3 /* BrowserViewController.xib */; };
 		D8EA24C6145BA49100EB08B3 /* MyApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EA24C3145BA49100EB08B3 /* MyApplication.m */; };
@@ -109,8 +110,6 @@
 		09270762141E4EC900E778AE /* DataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHelper.h; sourceTree = "<group>"; };
 		09270763141E4EC900E778AE /* DataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHelper.m; sourceTree = "<group>"; };
 		09270768141E52BB00E778AE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		092D3D2A145AE54E002F5F6C /* AFURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLCache.h; sourceTree = "<group>"; };
-		092D3D2B145AE54E002F5F6C /* AFURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLCache.m; sourceTree = "<group>"; };
 		093EC376145B0DE90010CDBB /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		093EC377145B0DE90010CDBB /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		093EC378145B0DE90010CDBB /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -223,6 +222,8 @@
 		5DD841E416E9D4C00090DEE4 /* VariableHeightExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VariableHeightExample.xib; sourceTree = "<group>"; };
 		5DD841FC16E9DC140090DEE4 /* BaiduTopnewsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaiduTopnewsClient.h; path = example/BaiduTopnewsClient.h; sourceTree = "<group>"; };
 		5DD841FD16E9DC140090DEE4 /* BaiduTopnewsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaiduTopnewsClient.m; path = example/BaiduTopnewsClient.m; sourceTree = "<group>"; };
+		5DFF824216F9690400C839D6 /* AFURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLCache.h; sourceTree = "<group>"; };
+		5DFF824316F9690400C839D6 /* AFURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLCache.m; sourceTree = "<group>"; };
 		C37BC8E3144C340600423D44 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		D8EA24BF145BA49100EB08B3 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
 		D8EA24C0145BA49100EB08B3 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
@@ -265,18 +266,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		092D3D29145AE52F002F5F6C /* AFURLCache */ = {
-			isa = PBXGroup;
-			children = (
-				092D3D2A145AE54E002F5F6C /* AFURLCache.h */,
-				092D3D2B145AE54E002F5F6C /* AFURLCache.m */,
-			);
-			name = AFURLCache;
-			sourceTree = "<group>";
-		};
 		093EC375145B0DE90010CDBB /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				5DFF824216F9690400C839D6 /* AFURLCache.h */,
+				5DFF824316F9690400C839D6 /* AFURLCache.m */,
 				093EC376145B0DE90010CDBB /* AFHTTPClient.h */,
 				093EC377145B0DE90010CDBB /* AFHTTPClient.m */,
 				093EC378145B0DE90010CDBB /* AFHTTPRequestOperation.h */,
@@ -456,7 +450,6 @@
 			children = (
 				5DD841AE16E9C56E0090DEE4 /* SinaWeibo */,
 				093EC375145B0DE90010CDBB /* AFNetworking */,
-				092D3D29145AE52F002F5F6C /* AFURLCache */,
 				D8EA24BD145BA45C00EB08B3 /* BrowserViewController */,
 				09E442B7141F969400AD2DAE /* RefreshTableHeaderView */,
 				09885F491419027D00CCE17A /* JSONKit */,
@@ -690,7 +683,6 @@
 				09270764141E4EC900E778AE /* DataHelper.m in Sources */,
 				09E442BB141F96A900AD2DAE /* EGORefreshTableHeaderView.m in Sources */,
 				09E442D0141F97AE00AD2DAE /* ListViewController.m in Sources */,
-				092D3D2C145AE54E002F5F6C /* AFURLCache.m in Sources */,
 				093EC38B145B0DE90010CDBB /* AFHTTPClient.m in Sources */,
 				093EC38C145B0DE90010CDBB /* AFHTTPRequestOperation.m in Sources */,
 				093EC38D145B0DE90010CDBB /* AFImageCache.m in Sources */,
@@ -721,6 +713,7 @@
 				5DD841F816E9D4C00090DEE4 /* VariableHeightCell.m in Sources */,
 				5DD841F916E9D4C00090DEE4 /* VariableHeightExample.m in Sources */,
 				5DD841FE16E9DC140090DEE4 /* BaiduTopnewsClient.m in Sources */,
+				5DFF824416F9690400C839D6 /* AFURLCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,6 +722,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09885EC51418F2E600CCE17A /* IOSBoilerplateTests.m in Sources */,
+				5DFF824516F9690400C839D6 /* AFURLCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
